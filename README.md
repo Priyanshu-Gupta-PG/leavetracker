@@ -77,10 +77,28 @@ Key components:
 ## Getting Started
 
 1. Clone the repository into a Next.js / React project.
-2. Install dependencies (typical): `npm install wagmi viem ethers` (plus your preferred wallet/connectors).
-3. Ensure `lib/contract.ts` is present with the contract address and ABI.
-4. Run the app and connect a wallet on the Flare Coston2 testnet (or configure your provider to point to the network).
-5. Use the sample component to test applying, approving, and rejecting leave requests.
+2. Install dependencies:
+
+```powershell
+npm install
+```
+
+3. Create a local environment file with credentials (do NOT commit secrets) — see `.env.example` in the project root and copy it to `.env.local` or `.env`:
+
+```powershell
+copy .env.example .env.local
+# then open .env.local and replace the values with your WalletConnect Project ID
+```
+
+4. Run the app locally (Next.js dev server):
+
+```powershell
+npm run dev
+```
+
+5. Open the app in your browser: `http://localhost:3000` (or your computer's local network IP shown by Next.js).
+
+6. Connect a wallet and use the sample component to test apply/approve/reject flows.
 
 ---
 
